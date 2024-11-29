@@ -1,0 +1,33 @@
+def arrray_multi(arr, x):
+
+    for i in range(len(arr)):
+        arr[i] *= x
+
+def main():
+    try:
+
+        n = int(input("要素数を入力: "))
+        if n <= 0:
+            print("正の数で入力してください")
+            return
+
+        print(f"{n}個の要素をスペース区切りで入力: ", end="")
+        array = list(map(int, input().split()))
+        if len(array) != n:
+            print("入力された要素数が{n}個でない")
+            return
+
+        a = int(input("何倍か入力: "))
+
+        array_multi(array, a)
+
+
+        print("{", end="")
+        print(", ".join(map(str, array)), end="")
+        print("}")
+    except ValueError:
+        print("無効な入力")
+
+
+if _name_ == "_main_":
+    main()
