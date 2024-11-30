@@ -7,37 +7,36 @@
 
 ## 使用方法
 - 1.リポジトリをダウンロードする。
-git clone https://github.com/HaneoHaruki/robosyshomework.git
-cd robosyshomework
+`git clone https://github.com/HaneoHaruki/robosyshomework.git`
+`cd robosyshomework`
 - 2.必要に応じて実行権限を付与する。
-chmod +x cmtosun.py
+`chmod +x cmtosun.py`
 - 3.ターミナルで以下のコマンドを実行。
-python3 cmtosun 好きな数字
+`python3 cmtosun 好きな数字`
 - 4.実行結果が表示される。
-変換された値　寸
+`変換された値寸`
 
 ## 動作環境
-- OS: Linux, mac05, Windows
 - Python:  Python3.7, 3.8, 3.9, 3.10
 
 ## 使い方
 実行方法の例
 
 入力時1
-python3 cmtosun.py 30
+`python3 cmtosun.py 30`
 
 出力時1
-9.90寸
+`9.90寸`
 
 入力時2
-python3 cmtosun.py 100
+`python3 cmtosun.py 100`
 
 出力時2
-3.30尺
+`3.30尺`
 
 ## テスト
 - 1.ターミナルで以下のコマンドを実行。
-./test.bash
+`./test.bash`
 - 2.テストに成功するとOKというメッセージが表示される。
 
 ## ライセンス
