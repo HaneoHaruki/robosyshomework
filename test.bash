@@ -9,29 +9,29 @@ ng () {
 
 res=0
 
-input=$(echo 30 | ./kadai1.py)
-[ "${input}" = "長さ(cm)を入力9.90寸" ] || ng "$LINENO"
+input=$(echo 30 | python3 kadai1.py 30)
+[ "${input}" = "9.90寸" ] || ng "$LINENO"
 
-input=$(echo 15 | ./kadai1.py)
-[ "${input}" = "長さ(cm)を入力4.95寸" ] || ng "$LINENO"
+input=$(echo 15 | python3 kadai1.py 15)
+[ "${input}" = "4.95寸" ] || ng "$LINENO"
 
-input=$(echo 90 | ./kadai1.py)
-[ "${input}" = "長さ(cm)を入力2.97尺" ] || ng "$LINENO"
+input=$(echo 90 | python3 kadai1.py 90)
+[ "${input}" = "2.97尺" ] || ng "$LINENO"
 
-input=$(echo 100 | ./kadai1.py)
-[ "${input}" = "長さ(cm)を入力3.30尺" ] || ng "$LINENO"
+input=$(echo 100 | python3 kadai1.py 100)
+[ "${input}" = "3.30尺" ] || ng "$LINENO"
 
-input=$(echo 0 | ./kadai1.py)
-[ "${input}" = "長さ(cm)を入力0.00寸" ] || ng "$LINENO"
+input=$(echo 0 | python3 kadai1.py 0)
+[ "${input}" = "0.00寸" ] || ng "$LINENO"
 
-input=$(echo -10 | ./kadai1.py)
-[ "${input}" = "長さ(cm)を入力正の数を入力" ] || ng "$LINENO"
+input=$(echo -10 | python3 kadai1.py -10)
+[ "${input}" = "" ] || ng "$LINENO"
 
-input=$(echo あ | ./kadai1.py)
-[ "${input}" = "長さ(cm)を入力エラー" ] || ng "$LINENO"
+input=$(echo あ | python3 kadai1.py あ)
+[ "${input}" = "" ] || ng "$LINENO"
 
-input=$(echo | ./kadai1.py)
-[ "${input}" = "長さ(cm)を入力エラー" ] || ng "$LINENO"
+input=$(echo | python3 kadai1.py )
+[ "${input}" = "" ] || ng "$LINENO"
 
 [ "${res}" = 0 ] && echo OK
 exit $res

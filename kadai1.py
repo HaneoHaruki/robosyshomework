@@ -2,6 +2,8 @@
 # SPDX-FileCopyrightTest: 2024 Haruki Haneo
 # SPDX-License-Indentifier: BSD-3-Clause
 
+import sys
+
 def cm_to_sun(cm):
     return cm / 3.03
 
@@ -10,10 +12,12 @@ def cm_to_syaku(cm):
 
 def main():
     try:
-        cm = float(input("長さ(cm)を入力"))
+        if len(sys.argv) < 2:
+           return
+
+        cm = float(sys.argv[1])
 
         if cm < 0:
-            print("正の数を入力")
             return
 
         sun = cm_to_sun(cm)
@@ -25,7 +29,7 @@ def main():
            print(f"{sun:.2f}寸")
 
     except ValueError:
-        print("エラー")
+        return
 
 if __name__ == "__main__":
     main()
