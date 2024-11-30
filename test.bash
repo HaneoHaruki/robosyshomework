@@ -1,5 +1,6 @@
 #!/bin/bash
-# SPDX-FileCopyrightTest 2024 Haruki Haneo
+# SPDX-FileCopyrightTest: 2024 Haruki Haneo
+# SPDX-License-Indentifier: BSD-3-Clause
 
 
 ng () {
