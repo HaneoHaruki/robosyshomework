@@ -8,7 +8,7 @@
 
 ## 使用方法
 - 1.リポジトリをダウンロードする。  
-`git clone https://github.com/HaneoHaruki/robosyshomework.git`
+`git clone https://github.com/HaneoHaruki/robosyshomework.git`  
 `cd robosyshomework`
 - 2.必要に応じて実行権限を付与する。  
 `chmod +x cmtosun`
