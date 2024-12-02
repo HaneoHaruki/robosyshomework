@@ -1,6 +1,6 @@
 ## robosyskadai
 
-![test](https://github.com/HarukiHaneo/robosyskadai/actions/workflows/test.yml/badge.svg)
+![test](https://github.com/HaneoHaruki/robosyskadai/actions/workflows/test.yml/badge.svg)
 
 ## 概要
 - ロボットシステム学の課題用プログラム
