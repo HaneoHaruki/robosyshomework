@@ -10,29 +10,32 @@ ng () {
 
 res=0
 
-input=$(echo 30 | python3 cmtosun.py 30)
+input=$(echo 30 | ./cmtosun)
 [ "${input}" = "9.90寸" ] || ng "$LINENO"
 
-input=$(echo 15 | python3 cmtosun.py 15)
+input=$(echo 15 | ./cmtosun)
 [ "${input}" = "4.95寸" ] || ng "$LINENO"
 
-input=$(echo 90 | python3 cmtosun.py 90)
+input=$(echo 90 | ./cmtosun)
 [ "${input}" = "2.97尺" ] || ng "$LINENO"
 
-input=$(echo 100 | python3 cmtosun.py 100)
+input=$(echo 100 | ./cmtosun)
 [ "${input}" = "3.30尺" ] || ng "$LINENO"
 
-input=$(echo 0 | python3 cmtosun.py 0)
+input=$(echo 0 | ./cmtosun)
 [ "${input}" = "0.00寸" ] || ng "$LINENO"
 
-input=$(echo -10 | python3 cmtosun.py -10)
+input=$(echo -10 | ./cmtosun)
 [ "${input}" = "" ] || ng "$LINENO"
+[ "${out}" = "" ] || ng "$LINENO"
 
-input=$(echo あ | python3 cmtosun.py あ)
+input=$(echo あ | ./cmtosun)
 [ "${input}" = "" ] || ng "$LINENO"
+[ "${out}" = "" ] || ng "$LINENO"
 
-input=$(echo | python3 cmtosun.py )
+input=$(echo | ./cmtosun)
 [ "${input}" = "" ] || ng "$LINENO"
+[ "${out}" = "" ] || ng "$LINENO"
 
 [ "${res}" = 0 ] && echo OK
 exit $res

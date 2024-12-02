@@ -1,0 +1,31 @@
+#!/usr/bin/python3
+# SPDX-FileCopyrightTest: 2024 Haruki Haneo
+# SPDX-License-Indentifier: BSD-3-Clause
+
+import sys
+
+while 1:
+    deta = sys.stdin.readline()
+    try:
+        detaA = float(deta)
+        if detaA < 0:
+            sys.exit(1)
+        else:
+            break
+
+    except ValueError:
+        sys.exit(1)
+
+
+
+
+syaku = detaA / 30.3
+sun = detaA / 3.03
+
+
+if syaku >= 1:
+    print("{:.2f}尺".format(syaku))
+else:
+    print("{:.2f}寸".format(sun))
+
+
