@@ -17,8 +17,6 @@ while 1:
         sys.exit(1)
 
 
-
-
 syaku = detaA / 30.3
 sun = detaA / 3.03
 
@@ -27,5 +25,3 @@ if syaku >= 1:
     print("{:.2f}尺".format(syaku))
 else:
     print("{:.2f}寸".format(sun))
-
-
